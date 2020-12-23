@@ -1,0 +1,122 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragment.tour.TourFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fond_gradient"
+
+        tools:context=".QuestionStepActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_fond"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/question_step_tv_nameAnounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="Au tour de : "
+            android:textColor="@color/colorGrayText"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/question_step_cv"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="20sp"
+            app:cardBackgroundColor="@color/colorPlayerItemBackground"
+            app:cardCornerRadius="15dp"
+            app:cardMaxElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_step_tv_nameAnounce">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/question_step_tv_nameAnounce_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="Nom Joeur"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/question_step_tv_sentanceAnounce_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="Manger des frites"
+                    android:textColor="@color/colorGrayText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/question_step_tv_nameAnounce_card" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/question_step_quiADit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question_step_cv"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="15sp"
+            android:textColor="@color/colorGrayText"
+            android:text="Qui a dit : "
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/question_step_phrase_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_step_quiADit_tv"
+            android:layout_margin="15sp"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:text="PHRASE DU JOUEUR A DEVINER"/>
+        <ImageView
+            android:id="@+id/question_step_play_iv"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:background="@drawable/ic_play_24"
+            app:layout_constraintTop_toBottomOf="@id/question_step_phrase_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50sp"
+            android:visibility="visible"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/question_step_recycleview"
+            android:layout_width="0dp"
+            android:layout_height="150sp"
+            app:layout_constraintTop_toBottomOf="@id/question_step_play_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50sp"
+            android:foregroundGravity="center"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

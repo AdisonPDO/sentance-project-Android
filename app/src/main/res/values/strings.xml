@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">yadis</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok">Ok</string>
+    <string name="texte">Texte</string>
+    <string name="rules">Normal \n \n
+
+Joueurs\n
+Ajouter entre 3 et 15 joueurs.\n
+Pour chaque joueur définir une phrase et un gage. Vous pourrez ajouter de nouvelles phrases et gages pendant la partie.\n\n
+
+Deviner la phrase\n
+Chaque manche, une phrase est choisi aléatoirement parmi celle de tous les joueurs.\n
+La phrase est lu et apparait sur l’écran.\n
+Le joueur choisi doit deviner qui a dit cette phrase.\n\n
+
+Gage\n
+Si le joueur devine l’auteur de la phrase, alors le gage va à l’auteur de la phrase.\n
+Si le joueur se trompe alors il doit réaliser le gage lui même\n\n
+
+Score\n
+Si le joueur donne une bonne réponse il gagne 10 points.\n
+Si il se trompe l’auteur de la phrase gagne 5 points.\n\n
+
+Manche\n
+Lorsqu’il ne reste plus assez de phrases à deviner.\n
+Vous pouvez donner de nouvelles phrases et de nouveaux gages.\n\n
+
+Hard :\n
+
+Deviner la phrase\n
+Chaque manche, une phrase est choisi aléatoirement parmi celle de tous les joueurs.\n
+La phrase est lu et n’apparait sur l’écran !\n
+Le joueur choisi doit deviner qui a dit cette phrase en 30 secondes seulement !\n\n
+
+Score\n
+Si le joueur donne une bonne réponse il gagne 10 points plus un bonus de rapidité de réponse. L’auteur de la phrase perd 5 points si il est démasqué.\n
+Si il se trompe l’auteur de la phrase gagne 5 points et le joueur en perd 5 aussi.</string>
+    <string name="sentance">Sentance</string>
+    <string name="nom">Nom</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

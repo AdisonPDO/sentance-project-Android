@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="fragment.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_tourFragment"
+            app:destination="@id/tourFragment"
+            app:popUpToInclusive="true"></action>
+        <action
+            android:id="@+id/action_registerFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/tourFragment"
+        android:name="fragment.tour.TourFragment"
+        android:label="fragment_tour"
+        tools:layout="@layout/fragment_tour" >
+        <argument
+            android:name="list"
+            app:argType="ListP" />
+        <argument
+            android:name="currentPlayer"
+            app:argType="Player" />
+        <argument
+            android:name="currentTextPlayer"
+            app:argType="Player" />
+        <action
+            android:id="@+id/action_tourFragment_to_responseFragment"
+            app:destination="@id/responseFragment" />
+        <action
+            android:id="@+id/action_tourFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/responseFragment"
+        android:name="fragment.response.ResponseFragment"
+        android:label="fragment_response"
+        tools:layout="@layout/fragment_response" >
+        <argument
+            android:name="list"
+            app:argType="ListP" />
+        <argument
+            android:name="currentPlayer"
+            app:argType="Player" />
+        <argument
+            android:name="currentText"
+            app:argType="Player" />
+        <argument
+            android:name="goodResponse"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_responseFragment_to_tourFragment"
+            app:destination="@id/tourFragment" />
+        <action
+            android:id="@+id/action_responseFragment_to_rankFragment2"
+            app:destination="@id/rankFragment2" />
+        <action
+            android:id="@+id/action_responseFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rankFragment2"
+        android:name="fragment.rank.RankFragment"
+        android:label="fragment_rank"
+        tools:layout="@layout/fragment_rank" >
+        <argument android:name="list"
+            app:argType="ListP" />
+        <action
+            android:id="@+id/action_rankFragment2_to_restartFragment"
+            app:destination="@id/restartFragment" />
+        <action
+            android:id="@+id/action_rankFragment2_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restartFragment"
+        android:name="fragment.restart.RestartFragment"
+        android:label="fragment_restart"
+        tools:layout="@layout/fragment_restart" >
+        <action
+            android:id="@+id/action_restartFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <argument
+            android:name="list"
+            app:argType="ListP" />
+        <action
+            android:id="@+id/action_restartFragment_to_tourFragment"
+            app:destination="@id/tourFragment"
+            app:popUpTo="@id/registerFragment" />
+        <action
+            android:id="@+id/action_restartFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="fragment.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_restartFragment"
+            app:destination="@id/restartFragment"
+            app:popUpTo="@id/registerFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="fragment.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+</navigation>
